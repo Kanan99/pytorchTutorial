@@ -17,7 +17,7 @@ def forward(x):
 
 # loss = MSE
 def loss(y, y_pred):
-    return ((y_pred - y)**2).mean()
+    return ((y_pred - y)**2)/x.size
 
 # J = MSE = 1/N * (w*x - y)**2
 # dJ/dw = 1/N * 2x(w*x - y)
